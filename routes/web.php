@@ -14,4 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[ClientsController::class , 'store']);
+Route::get('/', function () {
+    return view('formulaire');
+});
+Route::post('clients', [ClientsController::class, 'store']);
